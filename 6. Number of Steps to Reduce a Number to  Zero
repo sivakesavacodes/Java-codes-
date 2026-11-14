@@ -1,0 +1,18 @@
+public class NumberOfSteps {
+ public static int numberOfSteps(int num) {
+ int steps = 0;
+ while (num > 0) {
+ if (num % 2 == 0) num /= 2;
+ else num -= 1;
+ steps++;
+ }
+ return steps;
+ }
+ public static void main(String[] args) {
+ int[] testCases = {14, 8, 123, 0};
+ for (int num : testCases) {
+ System.out.println("numberOfSteps(" + num + ") = " + 
+numberOfSteps(num));
+ }
+}
+}
