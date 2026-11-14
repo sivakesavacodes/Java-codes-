@@ -1,0 +1,18 @@
+public class ArrayStringsEqual {
+ public static boolean arrayStringsAreEqual(String[] word1, String[] 
+word2) {
+ StringBuilder s1 = new StringBuilder();
+ StringBuilder s2 = new StringBuilder();
+ for (String w : word1) s1.append(w);
+ for (String w : word2) s2.append(w);
+ return s1.toString().equals(s2.toString());
+ }
+ public static void main(String[] args) {
+ System.out.println(arrayStringsAreEqual(new String[]{"ab", "c"}, new
+String[]{"a", "bc"}));
+ System.out.println(arrayStringsAreEqual(new String[]{"a", "cb"}, new
+String[]{"ab", "c"}));
+ System.out.println(arrayStringsAreEqual(new String[]{"abc", "d", 
+"defg"}, new String[]{"abcddefg"}));
+ }
+}
