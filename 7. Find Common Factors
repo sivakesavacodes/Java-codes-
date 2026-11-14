@@ -1,0 +1,17 @@
+public class FindCommonFactors {
+ public static int commonFactors(int a, int b) {
+ int count = 0;
+ int smaller = Math.min(a, b);
+ for (int i = 1; i <= smaller; i++) {
+ if (a % i == 0 && b % i == 0) count++;
+ }
+ return count;
+ }
+ public static void main(String[] args) {
+ int[][] testCases = {{12, 6}, {25, 30}, {7, 13}};
+ for (int[] pair : testCases) {
+ System.out.println("commonFactors(" + pair[0] + ", " + pair[1] + 
+") = " + commonFactors(pair[0], pair[1]));
+ }
+ }
+}
