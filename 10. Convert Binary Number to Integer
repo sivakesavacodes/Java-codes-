@@ -1,0 +1,16 @@
+public class ConvertBinaryToInteger {
+ public static int binaryToInt(String binary) {
+ int result = 0;
+ for (int i = 0; i < binary.length(); i++) {
+ result = result * 2 + (binary.charAt(i) - '0');
+ }
+ return result;
+ }
+ public static void main(String[] args) {
+ String[] testCases = {"101", "1111", "100000", "0"};
+ for (String bin : testCases) {
+ System.out.println("binaryToInt(\"" + bin + "\") = " + 
+binaryToInt(bin));
+ }
+ }
+}
